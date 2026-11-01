@@ -1,0 +1,27 @@
+DDColor Tiny — Colourise
+
+DDColor is by Kang et al., Alibaba DAMO Academy.
+Paper: DDColor: Towards Photo-Realistic Image Colorization via Dual Decoders (ICCV 2023).
+The model and its upstream code are distributed under the Apache License 2.0.
+Copyright remains with the original authors. See the accompanying LICENSE.
+
+Upstream source:
+https://github.com/piddnad/DDColor/tree/2adb63f2656ac41cbdf7b894cddd94121a3faf13
+Official Tiny checkpoint:
+https://huggingface.co/piddnad/ddcolor_paper_tiny/tree/cf9fd99c1d7472689ec7413441c1b799a51866a3
+
+Core ML conversion: CoreML-Models (john-rocky/CoreML-Models).
+Conversion script:
+https://github.com/john-rocky/CoreML-Models/blob/cbb628d79aa969b32515f3cc9528fa23169aeab1/conversion_scripts/convert_ddcolor.py
+Original conversion archive, published by mlboydaisuke/coreml-zoo:
+https://huggingface.co/mlboydaisuke/coreml-zoo/resolve/a3d12de43e1b6131cd05cdd9027e0c4978d436e5/ddcolor/DDColor_Tiny.mlpackage.zip
+Original archive SHA-256:
+bfecea37d66005f602efe13978360b8e4707923234c3d1d00beeb4e36cb1b02c
+
+Paint-A-Pint validated this conversion against the official Tiny checkpoint.
+The mirrored archive adds LICENSE and NOTICE files alongside the model package.
+The model package, weights and conversion metadata are unchanged.
+No training or demonstration photographs are included.
+
+This attribution notice was assembled by Paint-A-Pint; it does not change the
+upstream licence or imply endorsement by the original authors or converter.

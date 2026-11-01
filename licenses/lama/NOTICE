@@ -1,0 +1,31 @@
+LaMa (big-lama) — Remove Object
+
+LaMa is by Suvorov et al., Samsung AI Center.
+Paper: Resolution-robust Large Mask Inpainting with Fourier Convolutions (2021).
+Copyright [2021] Samsung Research.
+The model and its upstream code are distributed under the Apache License 2.0.
+See the accompanying LICENSE.
+
+Upstream source:
+https://github.com/advimman/lama
+TorchScript weights: big-lama.pt, distributed by the IOPaint project:
+https://github.com/Sanster/models/releases/tag/add_big_lama
+TorchScript weights SHA-256:
+344c77bbcb158f17dd143070d1e789f38a66c04202311ae3a258ef66667a9ea9
+
+Core ML conversion: Simon H, Paint-A-Pint.
+Conversion script: scripts/remove-object-model/convert.py in:
+https://github.com/shanna-24/Paint-A-Pint
+The conversion traces big-lama at 1024 x 1024, uses fp32 weights and computation,
+and compiles it for Core ML on macOS 13 or later.
+Original lama-v2 archive:
+https://github.com/shanna-24/paint-a-pint-models/releases/download/lama-v2/LaMa-1024.mlmodelc.zip
+Original archive SHA-256:
+3d21268e6f77c04f57b6c69d8fdb81669c6cd05d33268d8654a54e1b4ba0e1be
+
+The new archive adds LICENSE and NOTICE files alongside the compiled model.
+The compiled model and weights are unchanged. No training or demonstration
+photographs are included.
+
+This attribution notice was assembled by Paint-A-Pint; it does not change the
+upstream licence or imply endorsement by the original model authors.
