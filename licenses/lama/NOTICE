@@ -16,16 +16,12 @@ TorchScript weights SHA-256:
 Core ML conversion: Simon H, Paint-A-Pint.
 Conversion script: scripts/remove-object-model/convert.py in:
 https://github.com/shanna-24/Paint-A-Pint
-The conversion traces big-lama at 1024 x 1024, uses fp32 weights and computation,
-and compiles it for Core ML on macOS 13 or later.
-Original lama-v2 archive:
-https://github.com/shanna-24/paint-a-pint-models/releases/download/lama-v2/LaMa-1024.mlmodelc.zip
-Original archive SHA-256:
-3d21268e6f77c04f57b6c69d8fdb81669c6cd05d33268d8654a54e1b4ba0e1be
-
-The new archive adds LICENSE and NOTICE files alongside the compiled model.
-The compiled model and weights are unchanged. No training or demonstration
-photographs are included.
+The conversion traces big-lama at 1024 x 1024 and converts it to a Core ML
+ML program for macOS 13 or later, with fp32 weights and computation; Paint-A-Pint
+compiles it on the Mac when it installs it.
+This archive (lama-v4) holds that ML package with these LICENSE and NOTICE files:
+https://github.com/shanna-24/paint-a-pint-models/releases/download/lama-v4/LaMa-1024.mlpackage.zip
+No training or demonstration photographs are included.
 
 This attribution notice was assembled by Paint-A-Pint; it does not change the
 upstream licence or imply endorsement by the original model authors.
