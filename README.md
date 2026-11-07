@@ -3,6 +3,8 @@
 Models that the Paint-A-Pint image editor for the Mac downloads once, when the person asks. They then run on the
 Mac. Pictures never leave the Mac.
 
+The Real-ESRGAN model for Upscale and Enhance is included with Paint-A-Pint and is no longer hosted here.
+
 The app pins each archive's size and SHA-256 and refuses anything else. Every archive holds a Core ML package
 (`.mlpackage`) with its `LICENSE` and `NOTICE` at the archive's root; the app compiles the package on the Mac when it
 installs it. `SHA256SUMS` lists the current archives.
@@ -27,24 +29,6 @@ takes the Fourier units' `rfftn` / `irfftn` as they are) and checks it against P
 test photos). Note: LaMa was trained on Places365, whose images are provided for non-commercial research and
 education.
 
-## Real-ESRGAN General x4v3 for Upscale and Enhance (release `realesrgan-general-x4v3-v1`)
-
-`RealESRGAN_General_x4v3.mlpackage.zip`: a Core ML ML program (FLOAT16 compute, FLOAT32 input and output, macOS 13 or
-later) of [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)'s `realesr-general-x4v3`, "Real-ESRGAN: Training
-Real-World Blind Super-Resolution with Pure Synthetic Data", Wang et al., Tencent ARC Lab, 2021. The app runs it in
-overlapping tiles: at 4× for Upscale, and at the same size for Enhance.
-
-- Size: 2,286,697 bytes
-- SHA-256: `27d14bda3d9a247a0d32d9b8fd14408c5b82e89b2e3a131a301476d1c67b038e`
-- Input `image`: 1×3×256×256 float RGB, 0–1.
-- Output `upscaled`: 1×3×1024×1024 float RGB, nominally 0–1.
-- About 0.02 s a tile on an M4 (about 5 s for a 12-megapixel picture).
-
-It was converted from the official checkpoint (`realesr-general-x4v3.pth`, Real-ESRGAN release v0.2.5.0, SHA-256
-`8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292`) by `scripts/upscale-model/convert.py` in the
-Paint-A-Pint source, and checked against PyTorch with `verify.py` (largest difference 0.0046 on a 0–1 scale). No
-weights were retrained or changed.
-
 ## DDColor Tiny for Colourise (release `ddcolor-tiny-v1`)
 
 `DDColor_Tiny.mlpackage.zip`: the DDColor Tiny Core ML package for macOS 13 or later, originally published by
@@ -66,7 +50,6 @@ Each model is redistributed under its own licence, and copyright remains with it
 not license Paint-A-Pint as a whole.
 
 - LaMa (Apache License 2.0): [licence](licenses/lama/LICENSE), [credits and provenance](licenses/lama/NOTICE).
-- Real-ESRGAN (BSD 3-Clause): [licence](licenses/realesrgan/LICENSE), [credits and provenance](licenses/realesrgan/NOTICE).
 - DDColor Tiny (Apache License 2.0): [licence](licenses/ddcolor/LICENSE), [credits and provenance](licenses/ddcolor/NOTICE).
 
 Paint-A-Pint also bundles these texts in Help → Third-party licences for offline access.
