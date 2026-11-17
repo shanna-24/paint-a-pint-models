@@ -1,0 +1,100 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "coremltools": "9.0",
+  "torch": "2.7.0",
+  "numpy": "1.26.4",
+  "computeUnits": "CPU_AND_GPU",
+  "cases": [
+    {
+      "fixture": "football.jpg",
+      "prompt": "green-box",
+      "maskIoU": 1.0,
+      "meanLogitError": 0.03122977912425995,
+      "maxLogitError": 0.20294189453125,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001759555598255247
+    },
+    {
+      "fixture": "football.jpg",
+      "prompt": "green-click",
+      "maskIoU": 1.0,
+      "meanLogitError": 0.020096750929951668,
+      "maxLogitError": 0.20873260498046875,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001759555598255247
+    },
+    {
+      "fixture": "football.jpg",
+      "prompt": "red-box",
+      "maskIoU": 1.0,
+      "meanLogitError": 0.034623004496097565,
+      "maxLogitError": 0.19641876220703125,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001759555598255247
+    },
+    {
+      "fixture": "football.jpg",
+      "prompt": "red-click",
+      "maskIoU": 1.0,
+      "meanLogitError": 0.02095770090818405,
+      "maxLogitError": 0.3103446960449219,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001759555598255247
+    },
+    {
+      "fixture": "football.jpg",
+      "prompt": "blue-box",
+      "maskIoU": 0.9940828402366864,
+      "meanLogitError": 0.02223164588212967,
+      "maxLogitError": 0.13080787658691406,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001759555598255247
+    },
+    {
+      "fixture": "football.jpg",
+      "prompt": "blue-click",
+      "maskIoU": 1.0,
+      "meanLogitError": 0.017283616587519646,
+      "maxLogitError": 0.27072906494140625,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001759555598255247
+    },
+    {
+      "fixture": "bus.jpg",
+      "prompt": "centre",
+      "maskIoU": 0.9999321895978843,
+      "meanLogitError": 0.011662840843200684,
+      "maxLogitError": 0.09604597091674805,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001533392205601558
+    },
+    {
+      "fixture": "bus.jpg",
+      "prompt": "box",
+      "maskIoU": 0.9971843509187908,
+      "meanLogitError": 0.007656354457139969,
+      "maxLogitError": 0.07639074325561523,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.0001533392205601558
+    },
+    {
+      "fixture": "zidane.jpg",
+      "prompt": "centre",
+      "maskIoU": 1.0,
+      "meanLogitError": 0.06818515062332153,
+      "maxLogitError": 0.1967296600341797,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.00018352916231378913
+    },
+    {
+      "fixture": "zidane.jpg",
+      "prompt": "box",
+      "maskIoU": 0.9993898718730934,
+      "meanLogitError": 0.011758613400161266,
+      "maxLogitError": 0.07410049438476562,
+      "candidateAgreement": true,
+      "encoderMeanError": 0.00018352916231378913
+    }
+  ],
+  "manifestSha256": "8b01686af226da3250015b54a7dbcb9114bab4460bd455f6aaa776233419b199"
+}

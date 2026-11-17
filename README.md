@@ -5,9 +5,8 @@ Mac. Pictures never leave the Mac.
 
 The Real-ESRGAN model for Upscale and Enhance is included with Paint-A-Pint and is no longer hosted here.
 
-The app pins each archive's size and SHA-256 and refuses anything else. Every archive holds a Core ML package
-(`.mlpackage`) with its `LICENSE` and `NOTICE` at the archive's root; the app compiles the package on the Mac when it
-installs it. `SHA256SUMS` lists the current archives.
+The app pins each archive's size and SHA-256 and refuses anything else. Archives hold a Core ML package (`.mlpackage`) or an atomic bundle of packages and prompt assets. Each includes
+its `LICENSE` and `NOTICE`; the app compiles the packages on the Mac when it installs them. `SHA256SUMS` lists the current archives.
 
 ## LaMa 1024 for Remove Object (release `lama-v4`)
 
@@ -44,6 +43,28 @@ The archive adds `LICENSE` and `NOTICE` to the original, unchanged model package
 `bfecea37d66005f602efe13978360b8e4707923234c3d1d00beeb4e36cb1b02c`. See the
 [DDColor credits](licenses/ddcolor/NOTICE) for the original source, checkpoint, converter and archive revisions.
 
+## MobileSAM for Object Selection (release `mobilesam-v1`)
+
+[`MobileSAM.bundle.zip`](https://github.com/shanna-24/paint-a-pint-models/releases/download/mobilesam-v1/MobileSAM.bundle.zip)
+contains the MobileSAM TinyViT encoder, a fixed two-token mask decoder, learned prompt weights, an integrity
+manifest, `LICENSE` and `NOTICE` under one `MobileSAM.bundle` root. Both packages install atomically.
+
+- Size: 20,178,610 bytes (about 20.2 MB)
+- SHA-256: `73d41bb47c1a652f19871b82b7c0a2b03206b820371185a9d693f25dad9a8c09`
+- Supported prompts: two box corners, or one positive click plus padding. Arbitrary multi-point refinement is not supported.
+- Whole-image longest-side-1024 inference; boxes guide selection but do not crop inference to add detail.
+- Validated on macOS 26.6.2 arm64 with CPU_AND_GPU. The app currently enables Apple silicon on macOS 26.6.2 or later.
+  macOS 12 is the export deployment target, not a claim of tested older-system or Intel compatibility.
+- Ten representative box/click prompts matched the original PyTorch model at chosen-mask IoU 0.99408–1.0, with
+  identical selected candidate indices, repeatable results and no E5RT diagnostics. This measures conversion parity,
+  not accuracy against human-labelled outlines. [Validation data](validation/mobilesam-v1/validation.json).
+
+The encoder and learned prompt-weight JSON originate from john-rocky/SamKit v1.0.0; Paint-A-Pint re-exports the
+original learned decoder weights to a genuinely fixed two-token graph. See [credits and provenance](licenses/mobilesam/NOTICE).
+The preparation and parity-verification recipe is in `scripts/object-selection-model` on Paint-A-Pint's
+`codex/object-selection` feature branch. The full manual native UI pass remains outstanding; this model release
+is not an announcement that the application feature has shipped. Images remain on the Mac.
+
 ## Licences and credits
 
 Each model is redistributed under its own licence, and copyright remains with its authors. These model licences do
@@ -51,5 +72,7 @@ not license Paint-A-Pint as a whole.
 
 - LaMa (Apache License 2.0): [licence](licenses/lama/LICENSE), [credits and provenance](licenses/lama/NOTICE).
 - DDColor Tiny (Apache License 2.0): [licence](licenses/ddcolor/LICENSE), [credits and provenance](licenses/ddcolor/NOTICE).
+
+- MobileSAM (Apache License 2.0): [licence](licenses/mobilesam/LICENSE), [credits and provenance](licenses/mobilesam/NOTICE).
 
 Paint-A-Pint also bundles these texts in Help → Third-party licences for offline access.
