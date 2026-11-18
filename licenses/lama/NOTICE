@@ -13,15 +13,15 @@ https://github.com/Sanster/models/releases/tag/add_big_lama
 TorchScript weights SHA-256:
 344c77bbcb158f17dd143070d1e789f38a66c04202311ae3a258ef66667a9ea9
 
-Core ML conversion: Simon H, Paint-A-Pint.
+Core ML conversion: Simon H, Picture-A-Pint.
 Conversion script: scripts/remove-object-model/convert.py in:
-https://github.com/shanna-24/Paint-A-Pint
+https://github.com/shanna-24/Picture-A-Pint
 The conversion traces big-lama at 1024 x 1024 and converts it to a Core ML
-ML program for macOS 13 or later, with fp32 weights and computation; Paint-A-Pint
+ML program for macOS 13 or later, with fp32 weights and computation; Picture-A-Pint
 compiles it on the Mac when it installs it.
-This archive (lama-v4) holds that ML package with these LICENSE and NOTICE files:
-https://github.com/shanna-24/paint-a-pint-models/releases/download/lama-v4/LaMa-1024.mlpackage.zip
+This archive (lama-v5) holds that ML package with these LICENSE and NOTICE files:
+https://github.com/shanna-24/picture-a-pint-models/releases/download/lama-v5/LaMa-1024.mlpackage.zip
 No training or demonstration photographs are included.
 
-This attribution notice was assembled by Paint-A-Pint; it does not change the
+This attribution notice was assembled by Picture-A-Pint; it does not change the
 upstream licence or imply endorsement by the original model authors.
