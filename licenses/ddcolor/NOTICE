@@ -18,10 +18,10 @@ https://huggingface.co/mlboydaisuke/coreml-zoo/resolve/a3d12de43e1b6131cd05cdd90
 Original archive SHA-256:
 bfecea37d66005f602efe13978360b8e4707923234c3d1d00beeb4e36cb1b02c
 
-Picture-A-Pint validated this conversion against the official Tiny checkpoint.
+Pic-A-Pint validated this conversion against the official Tiny checkpoint.
 The mirrored archive adds LICENSE and NOTICE files alongside the model package.
 The model package, weights and conversion metadata are unchanged.
 No training or demonstration photographs are included.
 
-This attribution notice was assembled by Picture-A-Pint; it does not change the
+This attribution notice was assembled by Pic-A-Pint; it does not change the
 upstream licence or imply endorsement by the original authors or converter.
