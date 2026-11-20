@@ -3,7 +3,7 @@
 Models that the Slexip image editor for the Mac downloads once, when the person asks. They then run on the
 Mac. Pictures never leave the Mac.
 
-The Real-ESRGAN model for Upscale and Enhance is included with Slexip and is no longer hosted here.
+The Real-ESRGAN model for Upscale and Enhance is included with Slexip and is not hosted here.
 
 The app pins each archive's size and SHA-256 and refuses anything else. Every archive holds a Core ML package
 (`.mlpackage`) with its `LICENSE` and `NOTICE` at the archive's root; the app compiles the package on the Mac when it
